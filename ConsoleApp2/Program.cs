@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace namn
 {
@@ -6,26 +6,16 @@ namespace namn
     {
         static void Main(string[] args)
         {
-            Console.Write("Skriv en sträng: ");
-            string ord = Console.ReadLine().ToLower();
-            Console.Write("Striv två bokstäver som du vill jämföra emot: ");
-            string check = Console.ReadLine().ToLower();
-            char[] letters = ord.ToCharArray();
-            char[] checkArray = check.ToCharArray();
-
-            if (letters.Contains(checkArray[0]) && letters.Contains(checkArray[1]))
+            Console.Write("Hur bred ska din triangel vara? ");
+            int längd = int.Parse(Console.ReadLine());
+            for (int x = 0; x < längd; x++)
             {
-                Console.WriteLine("Strängen innehåller båda värdena.");
+                for (int y = 0; y <= x; y++)
+                {
+                    Console.Write("X");
+                }
+                Console.WriteLine();
             }
-            else if (letters.Contains(checkArray[0]) ^ letters.Contains(checkArray[1]))
-            {
-                Console.WriteLine("Strängen inehåller ett av värdena.");
-            }
-            else
-            {
-                Console.WriteLine("Strängen innehåller ingen av värdena.");
-            }
-
 
         }
 
